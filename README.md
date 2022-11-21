@@ -7,9 +7,9 @@
 [![Kagerou.ravenbright.design](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://kagerou.ravenbright.design)
 
 <p align="center">
-<img src="https://github.com/ariqnrnns/kagerou-dark/blob/main/src/kagerou-dark-banner.jpg?raw=true" alt="Kagerou Dark Banner">
+<img src="https://raw.githubusercontent.com/ariqnrnns/kagerou-dark/main/src/Kagerou-dark-banner.jpg" alt="Kagerou Dark Banner">
 
-<img src="https://github.com/ariqnrnns/kagerou-dark/blob/main/src/kagerou-dark-stats.jpg?raw=true" alt="Kagerou Dark Stats">
+<img src="https://raw.githubusercontent.com/ariqnrnns/kagerou-dark/main/src/Kagerou-dark-stats.jpg" alt="Kagerou Dark Stats">
 </p>
 
 ## Free, customizable, modern & Lightning fast link in bio HTML landing page website templates
