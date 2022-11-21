@@ -1,9 +1,9 @@
 # Kagerou Dark
 
-[![Known Vulnerabilities](https://snyk.io/test/github.com/ariqnrnns/kagerou-dark/badge.svg)](https://snyk.io/test/github.com/ariqnrnns/kagerou-dark)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/ariqnrnns/kagerou-dark)
 [![Build CI](https://github.com/ariqnrnns/kagerou-dark/actions/workflows/build.yml/badge.svg)](https://github.com/ariqnrnns/kagerou-dark/actions/workflows/build.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ariqnrnns/kagerou-dark)
-[![GitHub license](https://img.shields.io/github/license/ariqnrnns/kagerou-dark)](https://github.com/ariqnrnns/kagerou-dark/blob/main/LICENSE.md)
+![GitHub](https://img.shields.io/github/license/ariqnrnns/kagerou-dark)
 [![Kagerou.ravenbright.design](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://kagerou.ravenbright.design)
 
 <p align="center">
