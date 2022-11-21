@@ -1,0 +1,91 @@
+/*Styles for actived Link inside navbar*/
+a.active {
+  font-weight: var(--rbrh-font-weight-bold);
+  color: var(--rbrh-text-800);
+}
+/*Styles for all hovered & focus links inside navbar except the button*/
+ a:not([role="button"], .btn, button, .nav_logo, .footer-logo) {
+  &:hover,
+  &:focus, &:focus-visible {
+		animation: none;
+		color: var(--rbrh-text-link-hover);
+		font-weight: var(--rbrh-font-weight-medium);
+		text-decoration: underline;
+		text-decoration-color: var(--rbrh-text-link-hover);
+		text-decoration-thickness: .1em;
+		text-underline-offset: .4em;
+		transition: none;
+		height: fit-content;
+		width: fit-content;
+		display: inline-block;
+		color: var(--rbrh-text-link-hover);
+  }
+}
+/*Make navigation stick at the top*/
+.sticky {
+	@mixin screen-xs-up {
+		position: static;
+	}
+	@mixin screen-sm-up {
+    position: sticky;
+    top: 0;
+    background-color: var(--rbrh-background);
+    z-index: 2;
+  }
+	@mixin screen-lg-up {
+		position: sticky;
+		top: 0;
+		z-index: 2;
+	}
+}
+/*
+* Logo & links
+*/
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.nav_logo {
+  display: flex;
+
+  align-content: center;
+
+  align-items: center;
+
+  align-self: center;
+
+  justify-content: center;
+  gap: var(--rbrh-spacing-3);
+  text-align: center;
+}
+/*
+* Active Link inside navbar
+*/
+.link-active, .link-navbar:hover {
+  font-weight: var(--rbrh-font-weight-bold);
+  color: var(--rbrh-text-900);
+	padding: var(--rbrh-spacing-3) var(--rbrh-spacing-4);
+	background-color: var(--rbrh-yellow-200);
+	border-radius: var(--rbrh-radius-sm);
+}
+[data-theme="dark"] .link-active, [data-theme="dark"] .link-navbar:hover {
+  background-color: var(--rbrh-gray-700);
+}
+/*
+* Hover states for all links except button inside navbar & footer
+*/
+.link-footer {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    transition: none;
+    animation: none;
+    text-underline-offset: 0.4em;
+    color: var(--rbrh-text-link-hover);
+    text-decoration-color: var(--rbrh-text-link-hover);
+    font-weight: var(--rbrh-font-weight-bold);
+    text-decoration-thickness: 0.1em;
+  }
+}

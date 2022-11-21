@@ -1,0 +1,469 @@
+/*
+*  This file contains CSS variables, mixins & typography helpers.
+*** Read Ravenbright CSS docs 👉: https://ravenbrightcss.com/docs/cssvar
+* Steps to customize
+*** 1. Download Ravenbright CSS 👉: https://github.com/ravenbrightdesign
+*** 2. Run `npm install`
+*** 3. Run `npm run dev`
+*** 4. Change the CSS properties or values & it's done!
+*/
+
+/* CSS variables
+   ============================================= */
+html, html[data-theme="light"] {
+  /* Colors */
+  --rbrh-white: #fff;
+  --rbrh-black: #030214;
+  --rbrh-gray-50: #f0eeee;
+  --rbrh-gray-100: #ededed;
+  --rbrh-gray-200: #e6e6e8;
+  --rbrh-gray-300: #cdccd1;
+  --rbrh-gray-400: #9b9aa3;
+  --rbrh-gray-500: #4f4e5e;
+  --rbrh-gray-600: #1d1b30;
+  --rbrh-gray-700: #0a0913;
+  --rbrh-gray-800: #050410;
+  --rbrh-gray-900: #02010f;
+  --rbrh-green-50: #f0fdf5;
+  --rbrh-green-100: #e0faea;
+  --rbrh-green-200: #cff7df;
+  --rbrh-green-300: #bef4d4;
+  --rbrh-green-400: #46ca7b;
+  --rbrh-green-500: rgb(27, 206, 99);
+  --rbrh-green-600: #048839;
+  --rbrh-green-700: #007c32;
+  --rbrh-green-800: #023c19;
+  --rbrh-green-900: #012911;
+  --rbrh-lime-50: #f8fcf7;
+  --rbrh-lime-100: #ebf7e9;
+  --rbrh-lime-200: #dbebe1;
+  --rbrh-lime-300: #c4edbb;
+  --rbrh-lime-400: #9bd991;
+  --rbrh-lime-500: #59bf49;
+  --rbrh-lime-600: #248514;
+  --rbrh-lime-700: #1d310e;
+  --rbrh-lime-800: #0e1c04;
+  --rbrh-lime-900: #0b0f06;
+  --rbrh-cyan-50: #f4fafa;
+  --rbrh-cyan-100: #e1fafa;
+  --rbrh-cyan-200: #c7f6f6;
+  --rbrh-cyan-300: #94efef;
+  --rbrh-cyan-400: #50e4e4;
+  --rbrh-cyan-500: #1cb6b6;
+  --rbrh-cyan-600: #0f6161;
+  --rbrh-cyan-700: #0c5050;
+  --rbrh-cyan-800: #0a3f3f;
+  --rbrh-cyan-900: #072e2e;
+  --rbrh-teal-50: #e7f5f2;
+  --rbrh-teal-100: #d6f5ed;
+  --rbrh-teal-200: #acebdc;
+  --rbrh-teal-300: #7ae5cc;
+  --rbrh-teal-400: #42e0ba;
+  --rbrh-teal-500: #14cc9f;
+  --rbrh-teal-600: #048464;
+  --rbrh-teal-700: #077156;
+  --rbrh-teal-800: #053f31;
+  --rbrh-teal-900: #022019;
+  --rbrh-red-50: #fee7e7;
+  --rbrh-red-100: #fdd5d5;
+  --rbrh-red-200: #faafaf;
+  --rbrh-red-300: #ec757b;
+  --rbrh-red-400: #e85a61;
+  --rbrh-red-500: #e2313a;
+  --rbrh-red-600: #ce2d35;
+  --rbrh-red-700: #a02329;
+  --rbrh-red-800: #410a0d;
+  --rbrh-red-900: #1f0506;
+  --rbrh-magenta-50: #ffedf4;
+  --rbrh-magenta-100: #ffc6dc;
+  --rbrh-magenta-200: #ff99c0;
+  --rbrh-magenta-300: #ff72a8;
+  --rbrh-magenta-400: #ff297a;
+  --rbrh-magenta-500: #ff0262;
+  --rbrh-magenta-600: #d90052;
+  --rbrh-magenta-700: #9f003c;
+  --rbrh-magenta-800: #77002d;
+  --rbrh-magenta-900: #3d0017;
+  --rbrh-orange-50: #fff4e9;
+  --rbrh-orange-100: #ffe6ce;
+  --rbrh-orange-200: #ffcd9e;
+  --rbrh-orange-300: #fea654;
+  --rbrh-orange-400: #fe9533;
+  --rbrh-orange-500: rgb(254, 122, 0);
+  --rbrh-orange-600: #e76f00;
+  --rbrh-orange-700: #b45700;
+  --rbrh-orange-800: #8c4300;
+  --rbrh-orange-900: #6b3300;
+  --rbrh-yellow-50: #f6f4f0;
+  --rbrh-yellow-100: #f5f2e7;
+  --rbrh-yellow-200: #f3e8c0;
+  --rbrh-yellow-300: #ebd277;
+  --rbrh-yellow-400: #eed371;
+  --rbrh-yellow-500: #ddaf0a;
+  --rbrh-yellow-600: #9e7e0c;
+  --rbrh-yellow-700: #7e6405;
+  --rbrh-yellow-800: #5a4806;
+  --rbrh-yellow-900: #292103;
+  --rbrh-blue-50: #f0f5fd;
+  --rbrh-blue-100: #dee9fc;
+  --rbrh-blue-200: #bcd6ff;
+  --rbrh-blue-300: #98bbf4;
+  --rbrh-blue-400: #74a3f0;
+  --rbrh-blue-500: #3f80eb;
+  --rbrh-blue-600: #0850c6;
+  --rbrh-blue-700: #283f5f;
+  --rbrh-blue-800: #121c2b;
+  --rbrh-blue-900: #040e1b;
+  --rbrh-sky-50: #e6f7fe;
+  --rbrh-sky-100: #d8f5ff;
+  --rbrh-sky-200: #a5e7ff;
+  --rbrh-sky-300: #78dbff;
+  --rbrh-sky-400: #5ad0fb;
+  --rbrh-sky-500: #00b2f1;
+  --rbrh-sky-600: #0c78a0;
+  --rbrh-sky-700: #086385;
+  --rbrh-sky-800: #08485f;
+  --rbrh-sky-900: #063b4c;
+  --rbrh-indigo-50: #eeedfe;
+  --rbrh-indigo-100: #cac6fc;
+  --rbrh-indigo-200: #b0abfa;
+  --rbrh-indigo-300: #8c84f8;
+  --rbrh-indigo-400: #756df7;
+  --rbrh-indigo-500: #2016d8;
+  --rbrh-indigo-600: #201c45;
+  --rbrh-indigo-700: #0b0749;
+  --rbrh-indigo-800: #131129;
+  --rbrh-indigo-900: #0d0b1b;
+  --rbrh-purple-50: #f6ebff;
+  --rbrh-purple-100: #eed9ff;
+  --rbrh-purple-200: #e6c8ff;
+  --rbrh-purple-300: #ca89ff;
+  --rbrh-purple-400: #af4eff;
+  --rbrh-purple-500: #8c00ff;
+  --rbrh-purple-600: #59039f;
+  --rbrh-purple-700: #480182;
+  --rbrh-purple-800: #2b004e;
+  --rbrh-purple-900: #150027;
+  --rbrh-violet-50: #eee9fd;
+  --rbrh-violet-100: #cbbbf8;
+  --rbrh-violet-200: #b29af4;
+  --rbrh-violet-300: #8f6cf0;
+  --rbrh-violet-400: #7950ed;
+  --rbrh-violet-500: #5824e8;
+  --rbrh-violet-600: #5021d3;
+  --rbrh-violet-700: hsl(256, 73%, 37%);
+  --rbrh-violet-800: #301480;
+  --rbrh-violet-900: #250f61;
+  --rbrh-spacing-0: 0rem;
+  --rbrh-spacing-1: 0.125rem;
+  --rbrh-spacing-2: 0.25rem;
+  --rbrh-spacing-3: 0.5rem;
+  --rbrh-spacing-4: 0.75rem;
+  --rbrh-spacing-5: 1rem;
+  --rbrh-spacing-6: 1.25rem;
+  --rbrh-spacing-7: 1.5rem;
+  --rbrh-spacing-8: 1.75rem;
+  --rbrh-spacing-9: 2rem;
+  --rbrh-spacing-10: 2.5rem;
+  --rbrh-spacing-12: 3rem;
+  --rbrh-spacing-14: 3.5rem;
+  --rbrh-spacing-16: 4rem;
+  --rbrh-spacing-18: 4.5rem;
+  --rbrh-spacing-20: 5rem;
+  --rbrh-spacing-22: 5.5rem;
+  --rbrh-spacing-24: 6rem;
+  --rbrh-spacing-28: 7rem;
+  --rbrh-spacing-32: 8rem;
+  --rbrh-screen-sm: 36rem;
+  --rbrh-screen-md: 50rem;
+  --rbrh-screen-lg: 67.5rem;
+  --rbrh-screen-xl: 85.375rem;
+  --rbrh-screen-lg: 67.5rem;
+  --rbrh-screen-xl: 87.5rem;
+  --rbrh-screen-xxl: 100rem;
+  /* Typography */
+  --rbrh-font-family-sans: "Archivo", "Helvetica", system-ui, sans-serif,
+    "Segoe UI", "Arial", "Verdana";
+  --rbrh-font-family-serif: serif, "Times", "Georgia", "Times New Roman";
+  --rbrh-font-weight-extrabold: 800;
+  --rbrh-font-weight-bold: 700;
+  --rbrh-font-weight-semibold: 600;
+  --rbrh-font-weight-medium: 500;
+  --rbrh-font-weight-default: 400;
+  --rbrh-font-weight-light: 300;
+  --rbrh-font-size-7xl: 3.6rem;
+  --rbrh-font-size-6xl: 2.8rem;
+  --rbrh-font-size-5xl: 2.3rem;
+  --rbrh-font-size-4xl: 2.1rem;
+  --rbrh-font-size-3xl: 1.8rem;
+  --rbrh-font-size-2xl: 1.5rem;
+  --rbrh-font-size-xl: 1.375rem;
+  --rbrh-font-size-lg: 1.25rem;
+  --rbrh-font-size-md: 1.125rem;
+  --rbrh-font-size-sm: 1rem;
+  --rbrh-font-size-xs: 0.875rem;
+  --rbrh-font-size-xxs: 0.75rem;
+  --rbrh-line-h-7xl: 4rem;
+  --rbrh-line-h-6xl: 3rem;
+  --rbrh-line-h-5xl: 2.7rem;
+  --rbrh-line-h-4xl: 2.4rem;
+  --rbrh-line-h-3xl: 2.2rem;
+  --rbrh-line-h-2xl: 2rem;
+  --rbrh-line-h-xl: 1.75rem;
+  --rbrh-line-h-lg: 1.5rem;
+  --rbrh-line-h-md: 1.5rem;
+  --rbrh-line-h-sm: 1.25rem;
+  --rbrh-line-h-xs: 1.25rem;
+  --rbrh-line-h-xxs: 1rem;
+  --rbrh-letter-spacing-lg: 0.045rem;
+  --rbrh-letter-spacing-md: -0.025rem;
+  --rbrh-letter-spacing-sm: -0.0375rem;
+  --rbrh-letter-spacing-xs: -0.05rem;
+  /* Border radius */
+  --rbrh-radius-circle: 100rem;
+  --rbrh-radius-xl: 1.25rem;
+  --rbrh-radius-lg: 1rem;
+  --rbrh-radius-md: 0.75rem;
+  --rbrh-radius-sm: 0.5rem;
+  --rbrh-radius-xs: 0.25rem;
+  /* Box shadow */
+  --rbrh-shadow-xl: rgba(0, 0, 0, 0.1) 0px 16px 32px;
+  --rbrh-shadow-lg: 0px 2px 12px 6px rgba(248, 21, 21, 0.25),
+    0 2px 12px rgba(235, 113, 0, 0.2);
+  --rbrh-shadow-md: 3px 3px 0 rgb(0, 0, 0, 0.4);
+  --rbrh-shadow-sm: 0px 1px 4px -8px rgba(0, 0, 0, 0.2),
+    0px 4px 10px -2px rgba(0, 0, 0, 0.1);
+  --rbrh-shadow-xs: 0px 2px 8px -3px rgba(0, 0, 0, 0.07),
+    0px 2px 8px -1px rgba(0, 0, 0, 0.08);
+  --rbrh-shadow-inset-xs: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --rbrh-shadow-inset-sm: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.08);
+  --rbrh-shadow-inset-md: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  /* Theming */
+  --rbrh-background-300: var(--rbrh-indigo-700);
+  --rbrh-background-200: var(--rbrh-indigo-800);
+  --rbrh-background-50: var(--rbrh-indigo-900);
+  --rbrh-background: var(--rbrh-black);
+
+  --rbrh-border-500: var(--rbrh-indigo-500);
+  --rbrh-border-400: var(--rbrh-indigo-600);
+  --rbrh-border-300: var(--rbrh-indigo-700);
+  --rbrh-border-200: var(--rbrh-indigo-800);
+  --rbrh-border-100: var(--rbrh-indigo-900);
+
+  --rbrh-text: var(--rbrh-white);
+  --rbrh-text-900: var(--rbrh-gray-100);
+  --rbrh-text-800: var(--rbrh-gray-200);
+  --rbrh-text-700: var(--rbrh-gray-300);
+  --rbrh-text-600: var(--rbrh-gray-400);
+  --rbrh-text-link-hover: var(--rbrh-red-400);
+  --rbrh-text-link: var(--rbrh-red-500);
+  --rbrh-background-link: var(--rbrh-red-500);
+}
+/* Font-family & background-color
+			============================================= */
+body {
+  font-family: var(--rbrh-font-family-sans);
+  background-color: var(--rbrh-background);
+}
+/* Breakpoint mixins
+			============================================= */
+@define-mixin screen-xs-up {
+  @media (min-width: 12.5rem) {
+    @mixin-content;
+  }
+}
+@define-mixin screen-sm-up {
+  @media (min-width: 36rem) {
+    @mixin-content;
+  }
+}
+@define-mixin screen-md-up {
+  @media (min-width: 48rem) {
+    @mixin-content;
+  }
+}
+@define-mixin screen-lg-up {
+  @media (min-width: 66.5rem) {
+    @mixin-content;
+  }
+}
+@define-mixin screen-xl-up {
+  @media (min-width: 85.375rem) {
+    @mixin-content;
+  }
+}
+@define-mixin screen-xxl-up {
+  @media (min-width: 100rem) {
+    @mixin-content;
+  }
+}
+/* Typography mixins
+			============================================= */
+@define-mixin font-size-7xl {
+  font-size: var(--rbrh-font-size-7xl);
+  line-height: var(--rbrh-line-h-7xl);
+  letter-spacing: var(--rbrh-letter-spacing-md);
+}
+@define-mixin font-size-6xl {
+  font-size: var(--rbrh-font-size-6xl);
+  line-height: var(--rbrh-line-h-6xl);
+  letter-spacing: var(--rbrh-letter-spacing-md);
+}
+@define-mixin font-size-5xl {
+  font-size: var(--rbrh-font-size-5xl);
+  line-height: var(--rbrh-line-h-5xl);
+  letter-spacing: var(--rbrh-letter-spacing-lg);
+}
+@define-mixin font-size-4xl {
+  font-size: var(--rbrh-font-size-4xl);
+  line-height: var(--rbrh-line-h-4xl);
+}
+@define-mixin font-size-3xl {
+  font-size: var(--rbrh-font-size-3xl);
+  line-height: var(--rbrh-line-h-3xl);
+}
+@define-mixin font-size-2xl {
+  font-size: var(--rbrh-font-size-2xl);
+  line-height: var(--rbrh-line-h-xl);
+  letter-spacing: var(--rbrh-letter-spacing-lg);
+}
+@define-mixin font-size-xl {
+  font-size: var(--rbrh-font-size-xl);
+  line-height: var(--rbrh-line-h-xl);
+  letter-spacing: var(--rbrh-letter-spacing-lg);
+}
+@define-mixin font-size-lg {
+  font-size: var(--rbrh-font-size-lg);
+  line-height: var(--rbrh-line-h-md);
+  letter-spacing: var(--rbrh-letter-spacing-xl);
+}
+@define-mixin font-size-md {
+  font-size: var(--rbrh-font-size-md);
+  line-height: var(--rbrh-line-h-md);
+  letter-spacing: normal;
+}
+@define-mixin font-size-sm {
+  font-size: var(--rbrh-font-size-sm);
+  line-height: var(--rbrh-line-h-md);
+  letter-spacing: normal;
+}
+@define-mixin font-size-xs {
+  font-size: var(--rbrh-font-size-xs);
+  line-height: var(--rbrh-line-h-sm);
+}
+@define-mixin font-size-xxs {
+  font-size: var(--rbrh-font-size-xxs);
+  line-height: var(--rbrh-line-h-xxs);
+}
+/* Font size
+			============================================= */
+@mixin screen-xs-up {
+  h1,
+  .h1 {
+    @mixin font-size-5xl;
+  }
+  h2,
+  .h2 {
+    @mixin font-size-4xl;
+  }
+  h3,
+  .h3 {
+    @mixin font-size-3xl;
+  }
+  h4,
+  .h4 {
+    @mixin font-size-2xl;
+  }
+  h5,
+  .h5 {
+    @mixin font-size-xl;
+  }
+  h6,
+  .h6 {
+    @mixin font-size-lg;
+  }
+}
+@mixin screen-lg-up {
+  h1,
+  .h1 {
+    @mixin font-size-7xl;
+  }
+  h2,
+  .h2 {
+    @mixin font-size-6xl;
+  }
+  h3,
+  .h3 {
+    @mixin font-size-5xl;
+  }
+  h4,
+  .h4 {
+    @mixin font-size-4xl;
+  }
+  h5,
+  .h5 {
+    @mixin font-size-2xl;
+  }
+  h6,
+  .h6 {
+    @mixin font-size-lg;
+  }
+}
+p,
+.par {
+  @mixin font-size-md;
+}
+.subtitle,
+label,
+summary {
+  @mixin font-size-sm;
+  width: fit-content;
+}
+small,
+.small {
+  @mixin font-size-xxs;
+}
+.caption {
+  @mixin font-size-xs;
+}
+
+/* Text styles
+			============================================= */
+.h1,
+h1 {
+  color: var(--rbrh-text-900);
+  font-weight: var(--rbrh-font-weight-bold);
+  word-break: normal;
+}
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4 {
+  color: var(--rbrh-text-900);
+  font-weight: var(--rbrh-font-weight-bold);
+}
+.h5,
+h5,
+.h6,
+h6 {
+  color: var(--rbrh-text-800);
+  font-weight: var(--rbrh-font-weight-bold);
+}
+p,
+a,
+span,
+li {
+  font-weight: var(--rbrh-font-weight-medium);
+  color: var(--rbrh-text-800);
+}
+small,
+label,
+cite,
+summary {
+  color: var(--rbrh-text-700);
+}
+summary {
+  font-weight: var(--rbrh-font-weight-semibold);
+}

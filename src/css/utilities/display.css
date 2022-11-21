@@ -1,0 +1,24 @@
+.d-none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.inline-block {
+  display: inline-block;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.list-item {
+  display: list-item;
+}
+.table {
+  display: table;
+}

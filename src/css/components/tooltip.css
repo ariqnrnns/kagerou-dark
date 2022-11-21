@@ -1,0 +1,30 @@
+/*! purgecss start ignore */
+.tooltip {
+  position: relative;
+
+	&:after {
+		/*Hide the tooltip after it showed up */
+		display: none;
+
+		content: attr(aria-label);
+		background: var(--rbrh-red-400);
+		color: var(--rbrh-black);
+		font-size: var(--rbrh-font-size-xxs);
+		border-radius: var(--rbrh-radius-md);
+		padding: var(--rbrh-spacing-1) var(--rbrh-spacing-2);
+		text-align: center;
+		z-index: 1000;
+		margin-left: var(--rbrh-spacing-3);
+	}
+}
+
+/* Show tooltip after copy button is clicked
+   ============================================= */
+.tooltip:active:after,
+.tooltip:focus:after,
+.tooltip:focus-within:after,
+.tooltip:focus-visible:after{
+  display: inline-block;
+  text-decoration: none;
+}
+/*! purgecss end ignore */

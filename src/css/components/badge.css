@@ -1,0 +1,31 @@
+.badge {
+  display: flex;
+  border-radius: var(--rbrh-radius-md);
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-weight: var(--rbrh-font-weight-medium);
+  flex-shrink: 0;
+}
+.badge svg,
+.badge-icon svg {
+  display: inline;
+  flex-shrink: 0;
+}
+
+/* Variants
+		 ============================================= */
+.badge-xs {
+  @mixin font-size-xxs;
+  padding: var(--rbrh-spacing-1) var(--rbrh-spacing-2);
+}
+.badge-sm {
+  @mixin font-size-xs;
+  padding: var(--rbrh-spacing-2) var(--rbrh-spacing-3);
+}
+.badge-md {
+  @mixin font-size-sm;
+  padding: var(--rbrh-spacing-3) var(--rbrh-spacing-4);
+}
+

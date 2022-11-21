@@ -1,0 +1,55 @@
+.backdrop {
+  position: relative;
+	pointer-events: none;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 60%);
+  transition: all 0.4s ease-out;
+  z-index: 10;
+}
+.backdrop.show {
+  position: fixed;
+  content: "";
+  display:flex;
+	z-index: 3;
+	flex-grow: 1;
+  cursor: pointer;
+	transition: none;
+  pointer-events: all;
+  width: 100%;
+  min-height: 100vh;
+	background-color: var(--rbrh-black);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.9;
+}
+.share-modal {
+  display: none;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.share-modal.show {
+	display: flex;
+	position: fixed;
+	z-index: 1000;
+  left: 50%;
+  background-color: var(--rbrh-white);
+	border: 1px solid var(--rbrh-red-500);
+  pointer-events: auto;
+
+	@mixin screen-xs-up {
+		width: 100%;
+		bottom: 0;
+	}
+	@mixin screen-sm-up {
+		width: 24rem;
+		max-width: 24rem;
+		height: fit-content;
+	}
+}
+/*! purgecss end ignore */

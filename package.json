@@ -1,0 +1,44 @@
+{
+  "name": "kagerou-dark",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ariqnrnns/kagerou-dark.git"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://kagerou.ravenbright.design",
+  "author": "Ariq N",
+  "description": "Free, customizable, modern & Lightning fast link in bio HTML landing page website templates powered by Ravenbright CSS. Kagerou comes with CSS utilities & CSS variables which you can modify according to your needs.",
+  "main": "index.html",
+  "scripts": {
+    "css-development": "postcss main.css --output src/ravenbright.dev.css --watch",
+		"vite": "vite",
+		"dev": "concurrently 'npm:css-development' 'npm:vite'",
+		"build": "vite build",
+    "preview": "vite preview"
+  },
+  "bugs": {
+    "url": "https://github.com/ariqnnrns/kagerou/issues"
+  },
+  "keywords": [
+    "CSS",
+    "HTML template",
+		"HTML",
+		"Link in bio",
+		"Landing page"
+  ],
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "cssnano": "^5.1.14",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "postcss-import": "^15.0.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.0",
+		"vite": "^3.2.4"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "concurrently": "^7.5.0"
+  }
+}

@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  background-color: var(--rbrh-background-50);
+  border-radius: var(--rbrh-radius-lg);
+  padding: var(--rbrh-spacing-5) var(--rbrh-spacing-7);
+  height: fit-content;
+}
+
+/* Variant
+   ============================================= */
+.clickable {
+  position: relative;
+  z-index: 0;
+  font-weight: var(--rbrh-font-weight-semibold);
+  &:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+    transition-duration: 0.1s;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:target,
+  &:focus {
+    box-shadow: var(--rbrh-shadow-focus);
+  }
+  a {
+    pointer-events: auto;
+  }
+}

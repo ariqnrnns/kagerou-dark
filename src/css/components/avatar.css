@@ -1,0 +1,64 @@
+/* Base Avatar
+   ============================================= */
+.avatar {
+	border-radius: var(--rbrh-radius-circle);
+	line-height: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+	flex-shrink: 0;
+}
+/* Avatar variants
+   ============================================= */
+.avatar-icon {
+  background-color: var(--rbrh-background-200);
+}
+.avatar-40 {
+  width: 2.5rem;
+  height: 2.5rem;
+  @mixin font-size-xs;
+}
+.avatar-32 {
+  width: 2rem;
+  height: 2rem;
+  @mixin font-size-sm;
+}
+.avatar-48 {
+  width: 3rem;
+  height: 3rem;
+  @mixin font-size-sm;
+}
+.avatar-56 {
+  width: 3.5rem;
+  height: 3.5rem;
+  @mixin font-size-md;
+}
+.avatar-64 {
+  width: 4rem;
+  height: 4rem;
+  @mixin font-size-md;
+}
+.avatar-72 {
+  width: 4.5rem;
+  height: 4.5rem;
+  @mixin font-size-lg;
+}
+.avatar-80 {
+  width: 5rem;
+  height: 5rem;
+  @mixin font-size-lg;
+}
+.avatar-88 {
+  width: 5.5rem;
+  height: 5.5rem;
+  @mixin font-size-2xl;
+}
+.avatar-104 {
+
+	font-size: var(--rbrh-font-size-2xl);
+	height: 6.5rem;
+	letter-spacing: var(--rbrh-letter-spacing-md);
+	line-height: var(--rbrh-line-h-xl);
+	width: 6.5rem;
+
+}

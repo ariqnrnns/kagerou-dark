@@ -1,0 +1,94 @@
+button,
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--rbrh-font-size-xs);
+  font-weight: var(--rbrh-font-weight-semibold);
+  background-color: var(--rbrh-green-600);
+  border-radius: var(--rbrh-radius-sm);
+  color: var(--rbrh-white);
+  padding: var(--rbrh-spacing-4) var(--rbrh-spacing-6);
+  &:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+  }
+  &:target,
+  &:focus {
+    box-shadow: var(--rbrh-shadow-focus);
+    outline: 0;
+  }
+  &:active {
+    transform: translate(var(--rbrh-spacing-1), var(--rbrh-spacing-1));
+    box-shadow: 0 1px 2px var(--rbrh-gray-100) inset;
+  }
+}
+
+/* Absolute button
+			============================================= */
+.btn-absolute {
+  background-color: var(--rbrh-background-50);
+  @mixin screen-xs-up {
+    display: none;
+  }
+  @mixin screen-sm-up {
+    display: block;
+    position: fixed;
+    bottom: var(--rbrh-spacing-5);
+    right: var(--rbrh-spacing-5);
+    box-shadow: var(--rbrh-shadow-sm);
+    width: fit-content;
+    z-index: 1000;
+    min-width: fit-content;
+  }
+}
+
+/* Variants
+			============================================= */
+
+.btn-sm {
+  line-height: var(--rbrh-line-h-xs);
+  padding: var(--rbrh-spacing-3) var(--rbrh-spacing-5);
+}
+
+.btn-lg {
+  box-shadow: var(--rbrh-shadow-md2);
+  font-size: var(--rbrh-font-size-md);
+  letter-spacing: normal;
+  line-height: var(--rbrh-line-h-md);
+  padding: var(--rbrh-spacing-5) var(--rbrh-spacing-7);
+}
+
+.btn-cta {
+  background-image: linear-gradient(
+    140deg,
+    hsl(357deg 70% 42%) 0%,
+    hsl(1deg 66% 44%) 30%,
+    hsl(5deg 68% 44%) 49%,
+    hsl(8deg 71% 44%) 63%,
+    hsl(11deg 73% 44%) 73%,
+    hsl(14deg 76% 44%) 81%,
+    hsl(17deg 79% 44%) 87%,
+    hsl(20deg 83% 44%) 92%,
+    hsl(23deg 87% 43%) 96%,
+    hsl(26deg 93% 42%) 98%,
+    hsl(29deg 100% 41%) 100%
+  );
+  box-shadow: var(--rbrh-shadow-inset-md);
+}
+.btn-secondary {
+  background-image: linear-gradient(
+    325deg,
+    hsl(242deg 90% 61%) 0%,
+    hsl(242deg 92% 66%) 14%,
+    hsl(242deg 93% 71%) 26%,
+    hsl(242deg 93% 76%) 36%,
+    hsl(291deg 63% 69%) 44%,
+    hsl(338deg 100% 71%) 52%,
+    hsl(11deg 100% 68%) 60%,
+    hsl(30deg 84% 56%) 67%,
+    hsl(30deg 80% 53%) 75%,
+    hsl(30deg 77% 50%) 84%,
+    hsl(30deg 83% 47%) 100%
+  );
+}
