@@ -14,7 +14,7 @@
 
 ## Free, customizable, modern & Lightning fast link in bio HTML landing page website templates
 
-Build modern & unique link in bio website that convert with Provence.
+Build modern & unique link in bio website that convert with Kagerou.
 
 Easily customize the template with utility classes & CSS custom properties. Get started quickly & build your portfolio with Kagerou Dark HTML template.
 
@@ -47,7 +47,7 @@ Easily customize the template with utility classes & CSS custom properties. Get 
 
 ## 🎨 Customization
 
-Provence is built with Ravenbright CSS library. You can customize the template with using either:
+Kagerou is built with Ravenbright CSS library. You can customize the template with using either:
 
 - [Utility classes](https://ravenbrightcss.com/docs/utilities/background)
 - [CSS variables](https://ravenbrightcss.com/docs/customize/cssvariables)
