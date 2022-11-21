@@ -3,7 +3,7 @@
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/ariqnrnns/kagerou-dark)
 [![Build CI](https://github.com/ariqnrnns/kagerou-dark/actions/workflows/build.yml/badge.svg)](https://github.com/ariqnrnns/kagerou-dark/actions/workflows/build.yml)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ariqnrnns/kagerou-dark)
-![GitHub](https://img.shields.io/github/license/ariqnrnns/kagerou-dark)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Kagerou.ravenbright.design](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://kagerou.ravenbright.design)
 
 <p align="center">
@@ -85,6 +85,7 @@ All of them respect users privacy, open source & comes with free plan.
 ## 🤝 Credits & attributions
 
 - Post-processor tool: [PostCSS](https://postcss.org)
+- Front end build tool: [Vite](https://vitejs.dev)
 - Photos are courtesy of [Unsplash](https://unsplash.com)
 - Typeface: `Archivo` by [Omnibus-Type](https://fonts.google.com/specimen/Archivo)
 - Icons are courtesy of [Tabler](https://tabler-icons.io/) and [Akar Icons](akaricons.com/)
